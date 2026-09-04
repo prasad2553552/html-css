@@ -1,0 +1,96 @@
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> responsive text size</title>
+    <style>
+        body {
+            background-color: rgb(254, 13, 49);
+        }
+        h1 {
+            color: blue;
+        }
+        p {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="font-size: 10vw;"> Responsive text size</h1>
+    <p style="font-size: 7vw;">Resize the brower window to see how the text size scales</p>
+    <p style="font-size: 5vw;">Use the "vw" unit when sizing text 15vw we set the size to 10% of the viewport width </p>
+    <p>viewport is the browers window size.
+        1vw=1% of viewport width.
+        if the viewport is 50cm wide 1vw is 0.5cm if the viewport is 50cm wide,ivw is 0.5cm
+    </p>
+</body>
+</html>
+-->.
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media queries</title>
+    <style>
+* {
+  box-sizing: border-box;
+}
+
+.left {
+  background-color: lightblue;
+  padding: 20px;
+  float: center;
+  width: 20%; /* The width is 20%, by default */
+}
+
+.main {
+  background-color: red;
+  padding: 20px;
+  float: left;
+  width: 60%; /* The width is 60%, by default */
+}
+
+.right {
+  background-color: lightgreen;
+  padding: 20px;
+  float: left;
+  width: 20%; /* The width is 20%, by default */
+}
+
+/* Use a media query to add a break point at 800px: */
+@media screen and (max-width: 800px) {
+  .left, .main, .right {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+}
+    </style>
+</head>
+<body>
+    <h2>Media Queries</h2>
+<p>Resize the browser window.</p>
+
+<p>Make sure you reach the breakpoint at 800px when resizing this frame.</p>
+
+<div class="left">
+  <p >left manu</p>
+  Home about services contact
+</div>
+
+<div class="main">
+  <p>Main content</p>
+  welcome to our website 
+  this is the main content section of the webpage
+  </div>
+
+<div class="right">
+  <p>Right content</p>
+  Latest news usefull links contact information
+</div>
+    
+</body>
+</html>
