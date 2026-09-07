@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimedia HTML</title>
+</head>
+<body>
+    <h1> video play </h1>
+    <video width="300"  height="300" controls>
+        <source src="C:\Users\RAM\Videos\WhatsApp Video 2025-08-13 at 19.48.59_5abac5bd.mp4" type="video/mp4">
+    </video>
+    
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>videos</title>
+</head>
+<body>
+    <h1> video autoplay muted controls </h1>
+    <video width="300" height="240" autoplay muted controls>
+        <source src="C:\Users\RAM\Videos\VID-20231106-WA0021.mp4" type="video/mp4">
+    </video>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> video autoplay muted  </h1>
+    <video width="300" height="240" autoplay muted >
+        <source src="C:\Users\RAM\Videos\VID-20231106-WA0021.mp4" type="video/mp4">
+    </video>
+</body>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Using JavaScript</title>
+</head>
+
+<body>
+
+    <div style="text-align: center;">
+
+        <button onclick="playpause()">Play/Pause</button>
+        <button onclick="makebig()">Big</button>
+        <button onclick="makesmall()">Small</button>
+        <button onclick="makenormal()">Normal</button>
+
+        <br><br>
+
+        <video id="video1" width="300" controls>
+            <source src="C:\Users\RAM\Videos\WhatsApp Video 2026-09-07 at 12.19.18 PM.mp4" type="video/mp4">
+        </video>
+
+    </div>
+
+    <script>
+
+        var myvideo = document.getElementById("video1");
+
+        function playpause() {
+            if (myvideo.paused) {
+                myvideo.play();
+            } else {
+                myvideo.pause();
+            }
+        }
+
+        function makebig() {
+            myvideo.width = 560;
+        }
+
+        function makesmall() {
+            myvideo.width = 320;
+        }
+
+        function makenormal() {
+            myvideo.width = 420;
+        }
+
+    </script>
+
+</body>
+</html>
+
+
+
