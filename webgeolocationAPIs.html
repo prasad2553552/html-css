@@ -1,0 +1,297 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Web APIs</title>
+</head>
+
+<body>
+
+    <h1>Geolocation API</h1>
+
+    <p>Click the button to get your coordinates</p>
+
+    <button onclick="getLocation()">Get Location</button>
+
+    <p id="demo"></p>
+
+    <script>
+
+        let result = document.getElementById("demo");
+
+        function getLocation() {
+            navigator.geolocation.getCurrentPosition(showLocation);
+        }
+
+        function showLocation(position) {
+            result.innerHTML =
+                "Latitude: " + position.coords.latitude +
+                "<br>Longitude: " + position.coords.longitude;
+        }
+
+    </script>
+
+</body>
+</html> -->
+
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML webAPIs</title>
+</head>
+<body>
+    <h1>Geolocations webAPIs</h1>
+    <p>Click the button to get your coordinates</p>
+    <button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
+<script>
+const x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(success, error);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function success(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+
+function error() {
+  alert("Sorry, no position available.");
+}
+</script>
+</body>
+</html>-->
+
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML webAPIs</title>
+</head>
+<body>
+    <h1>Error Handling and Rejections</h1>
+    <p>The second parameter of the getCurrentPosition() method is used to handle errors. 
+        It specifies a function to run if it fails to get the user's location. <br>
+Here is an example of a more specific error handling</p> <br><br>
+<p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
+<script>
+const x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(success, error);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function success(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+
+function error(error) {
+  switch(error.code) {
+    case error.PERMISSION_DENIED:
+      x.innerHTML = "User denied the request for Geolocation."
+      break;
+    case error.POSITION_UNAVAILABLE:
+      x.innerHTML = "Location information is unavailable."
+      break;
+    case error.TIMEOUT:
+      x.innerHTML = "The request to get user location timed out."
+      break;
+    case error.UNKNOWN_ERROR:
+      x.innerHTML = "An unknown error occurred."
+      break;
+  }
+}
+</script>
+</body>
+</html>
+-->
+
+
+
+<!--
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h1>Geolocation API</h1>
+
+    <button onclick="getLocation()">Current Location</button>
+    <button onclick="startTracking()">Start Tracking</button>
+    <button onclick="stopTracking()">Stop Tracking</button>
+
+    <p id="demo"></p>
+
+    <script>
+
+        let result = document.getElementById("demo");
+        let watchID;
+
+        // 1. Get Current Location
+        function getLocation() {
+
+            navigator.geolocation.getCurrentPosition(showLocation);
+
+        }
+
+        // 2. Show Location
+        function showLocation(position) {
+
+            result.innerHTML =
+                "Latitude: " + position.coords.latitude +
+                "<br>Longitude: " + position.coords.longitude;
+
+        }
+
+        // 3. Start Tracking
+        function startTracking() {
+
+            watchID = navigator.geolocation.watchPosition(showLocation);
+
+        }
+
+        // 4. Stop Tracking
+        function stopTracking() {
+
+            navigator.geolocation.clearWatch(watchID);
+
+            result.innerHTML = "Location tracking stopped.";
+
+        }
+
+    </script>
+
+</body>
+</html>-->
+
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h1>HTML Geolocation</h1>
+
+    <button onclick="getLocation()">Get Location</button>
+    <button onclick="startTracking()">Start Tracking</button>
+    <button onclick="stopTracking()">Stop Tracking</button>
+
+    <p id="demo"></p>
+
+    <script>
+
+        const x = document.getElementById("demo");
+
+        let watchID;
+
+
+        // Get current location
+        function getLocation() {
+
+            if (navigator.geolocation) {
+
+                navigator.geolocation.getCurrentPosition(
+                    success,
+                    error
+                );
+
+            } else {
+
+                x.innerHTML = "Geolocation is not supported.";
+
+            }
+        }
+
+
+        // Start location tracking
+        function startTracking() {
+
+            if (navigator.geolocation) {
+
+                watchID = navigator.geolocation.watchPosition(
+                    success,
+                    error
+                );
+
+                x.innerHTML = "Tracking started...";
+
+            } else {
+
+                x.innerHTML = "Geolocation is not supported.";
+
+            }
+        }
+
+
+        // Stop location tracking
+        function stopTracking() {
+
+            navigator.geolocation.clearWatch(watchID);
+
+            x.innerHTML = "Tracking stopped.";
+
+        }
+
+
+        // If location is found
+        function success(position) {
+
+            x.innerHTML =
+                "Latitude: " + position.coords.latitude +
+                "<br>Longitude: " + position.coords.longitude;
+
+        }
+
+
+        // If there is an error
+        function error(error) {
+
+            switch (error.code) {
+
+                case error.PERMISSION_DENIED:
+                    x.innerHTML = "Location permission denied.";
+                    break;
+
+                case error.POSITION_UNAVAILABLE:
+                    x.innerHTML = "Location is unavailable.";
+                    break;
+
+                case error.TIMEOUT:
+                    x.innerHTML = "Location request timed out.";
+                    break;
+
+                default:
+                    x.innerHTML = "An unknown error occurred.";
+
+            }
+        }
+
+    </script>
+
+</body>
+</html>
