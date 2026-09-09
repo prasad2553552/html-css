@@ -1,0 +1,94 @@
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Storge</title>
+</head>
+<body>
+    <h1>Browser test for Web Storage API</h1>
+
+<div id="result"></div>
+
+<script>
+const x = document.getElementById("result");
+if (typeof(Storage) !== "undefined") {
+  x.innerHTML = "Your browser supports Web storage!";
+} else {
+  x.innerHTML = "Sorry, no Web storage support!";
+}
+</script>
+
+</body>
+</html>-->
+
+
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Storage HTML</title>
+</head>
+<body>
+    <h1>The localStorage Object</h1>
+    <p>The localStorage object stores the data with no expiration date.
+         The data will not be lost when the browser is closed, and will be 
+         available the next day, week, or year.</p>
+         <div id="result"></div>
+
+<script>
+const x = document.getElementById("result");
+
+// Check browser support
+if (typeof(Storage) !== "undefined") {
+  // Store
+  localStorage.setItem("lastname", "villi");
+  localStorage.setItem("bgcolor", "blue");
+  // Retrieve
+  x.innerHTML = localStorage.getItem("lastname");
+  x.style.backgroundColor = localStorage.getItem("bgcolor");
+} else {
+  x.innerHTML = "Sorry, no Web storage support!";
+}
+</script>
+</body>
+</html>-->
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>web storage</title>
+<script>
+function clickCounter() {
+  const x = document.getElementById("result");
+  if (typeof(Storage) !== "undefined") {
+    if (localStorage.clickcount) {
+      localStorage.clickcount = Number(localStorage.clickcount)+10;
+    } else {
+      localStorage.clickcount = 1;
+    }
+    x.innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s)!";
+  } else {
+    x.innerHTML = "Sorry, no Web storage support!";
+  }
+}
+</script>
+</head>
+<body>
+
+<h1>localStorage</h1>
+
+<button onclick="clickCounter()" type="button">Click me!</button>
+<p id="result"></p>
+<p>Click the button to see the counter increase.</p>
+<p>Close the browser tab (or window), and try again, and the counter will continue to count.</p>
+
+</body>
+</html>
+
