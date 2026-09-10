@@ -1,0 +1,33 @@
+body {
+    font-family: Georgia;
+    background-color: #f2f2f2;
+}
+
+.header {
+    background-color: darkblue;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.container {
+    display: table-footer-group;
+}
+
+.menu {
+    
+    width: 180px;
+    padding: 20px;
+}
+
+.menu button {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0;
+    background-color: lightblue;
+    border: none;
+}
+
+.content {
+    padding: 30px;
+}

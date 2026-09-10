@@ -1,0 +1,82 @@
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Style Sheets</title>
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <style>
+        h1 {
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <h1>Multiple Style Sheets & Cascading Order</h1>
+    <p>The style of this document is a combination of an external stylesheet, and internal style</p>
+</body>
+</html>-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiple Stylesheets</title>
+
+    <link id="mystyle" rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Welcome to My Homepage</h1>
+        <p>Use the menu to select different Stylesheets</p>
+    </div>
+
+    <div class="container">
+
+        <div class="menu">
+            <button onclick="changeStyle('style1.css')">Stylesheet 1</button>
+            <button onclick="changeStyle('style2.css')">Stylesheet 2</button>
+            <button onclick="changeStyle('style3.css')">Stylesheet 3</button>
+            <button onclick="changeStyle('style4.css')">Stylesheet 4</button>
+            <button onclick="removeStyle()">No Stylesheet</button>
+        </div>
+
+        <div class="content">
+            <h2>Same Page Different Stylesheets</h2>
+
+            <p>
+                This is a demonstration of how different stylesheets
+                can change the layout of your HTML page.
+            </p>
+
+            <p>
+                You can change the layout of this page by selecting
+                different stylesheets from the menu.
+            </p>
+
+            <h2>No Styles</h2>
+
+            <p>
+                This page uses DIV elements to group different
+                sections of the HTML page.
+            </p>
+        </div>
+
+    </div>
+
+    <script>
+        function changeStyle(file) {
+            document.getElementById("mystyle").href = file;
+        }
+
+        function removeStyle() {
+            document.getElementById("mystyle").removeAttribute("href");
+        }
+    </script>
+
+</body>
+</html>
+

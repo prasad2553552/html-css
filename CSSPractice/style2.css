@@ -1,0 +1,30 @@
+body {
+font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+}
+
+.header {
+    background-color: red;
+    color: white;
+    padding: 20px;
+}
+
+.container {
+    display: inline-flexbox;
+}
+
+.menu {
+    width: 200px;
+    padding: 20px;
+}
+
+.menu button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 5px;
+}
+
+.content {
+    padding: 20px;
+}

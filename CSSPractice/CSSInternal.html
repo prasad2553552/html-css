@@ -1,0 +1,144 @@
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Internal CSS</h1>
+<p>
+An internal style sheet may be used if one single HTML page has a unique style.
+The internal style is defined inside the style element, inside the head section.</p>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>internal css</title>
+    <style>
+        body {
+            background-color: aqua;
+        }
+        h1 {
+            color: red;
+            text-align: center;
+        }
+        p {
+            color: blue;
+            text-align: left;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>this is the first headinh tag</h1>
+    <p>this is a first paragraphs</p>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p {
+  text-align: center;
+  color: red;
+} 
+</style>
+</head>
+<body>
+
+<p>Every paragraph will be affected by the style.</p>
+<p id="para1">Me too!</p>
+<p>And me!</p>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#para1 {
+  text-align: center;
+  color: red;
+}
+</style>
+</head>
+<body>
+
+<p id="para1">Hello World!</p>
+<p>This paragraph is not affected by the style.</p>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The CSS class Selector</title>
+<style>
+.center {
+  text-align: center;
+  color: red;
+}
+</style>
+</head>
+<body>
+<h1>The CSS class Selector</h1>
+<h2 class="center">Red and center-aligned heading</h2>
+<p class="center">Red and center-aligned paragraph.</p> 
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p.center {
+  text-align: center;
+  color: red;
+}
+</style>
+</head>
+<body>
+
+<h1 class="center">This heading will not be affected</h1>
+<p class="center">This paragraph will be red and center-aligned.</p> 
+
+</body>
+</html>-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p.center {
+  text-align: center;
+  color: red;
+}
+
+p.large {
+  font-size: 300%;
+}
+</style>
+</head>
+<body>
+
+<h1 class="center">This heading will not be affected</h1>
+<p class="center">This paragraph will be red and center-aligned.</p>
+<p class="center large">This paragraph will be red, center-aligned, and in a large font-size.</p> 
+
+</body>
+</html>
