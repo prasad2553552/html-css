@@ -1,0 +1,30 @@
+body {
+    font-family: Arial;
+    margin: 10;
+}
+
+.header {
+    background-color: green;
+    color:blue;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+}
+
+.menu {
+    width: 200px;
+    padding: 20px;
+}
+
+.menu button {
+    display: inline-block;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 5px;
+}
+
+.content {
+    padding: 20px;
+}

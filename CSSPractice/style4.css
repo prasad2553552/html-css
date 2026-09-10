@@ -1,0 +1,28 @@
+body {
+    font-family: Verdana;
+    background-color: white;
+}
+
+.header {
+    background-color: orange;
+    color: black;
+    padding: 25px;
+}
+
+.container {
+    display: block;
+}
+
+.menu {
+    padding: 10px;
+}
+
+.menu button {
+    padding: 10px 20px;
+    margin: 5px;
+}
+
+.content {
+    padding: 20px;
+    border: 2px solid orange;
+}
