@@ -1,0 +1,256 @@
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box model</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+        padding:50px;
+        margin: 80px;
+        border: 10px solid red;
+        background-color:blue
+            }
+    </style>
+</head>
+<body>
+<h1>CSS Box Model</h1>
+    <p class="box">hello world</p>
+</body>
+</html>
+-->
+
+<!--<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+  width: 320px;
+  height: 50px;
+  padding: 19px;
+  border: 5px solid rgb(7, 254, 7);
+  margin: 10;
+}
+</style>
+</head>
+<body>
+
+<h2>Calculate the total width:</h2>
+
+<img src="C:\Users\RAM\Pictures\paper.gif" width="400" height="300" alt="Klematis">
+<div>The picture above is 400px wide. The total width of this element is also 300px. The total height of this element is 300px.</div>
+
+</body>
+</html>-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Box Model</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .box-model {
+            width: 600px;
+            height: 450px;
+
+            margin: 40px auto;
+            border: 2px solid black;
+
+            background-color: #d3d3d3;
+
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        /* Margin */
+        .margin-text {
+            position: absolute;
+            font-size: 25px;
+        }
+
+        .top-margin {
+            top: 5px;
+            left: 220px;
+        }
+
+        .bottom-margin {
+            bottom: 5px;
+            left: 185px;
+        }
+
+        .left-margin {
+            left: -5px;
+            top: 190px;
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+        }
+
+        .right-margin {
+            right: -5px;
+            top: 190px;
+            writing-mode: vertical-rl;
+        }
+
+        /* Border */
+        .border-box {
+            position: absolute;
+            top: 55px;
+            left: 65px;
+            width: 470px;
+            height: 350px;
+
+            border: 2px dashed #168bd0;
+            background-color: lightgreen;
+            box-sizing: border-box;
+        }
+
+        .border-text {
+            position: absolute;
+            font-size: 22px;
+        }
+
+        .top-border {
+            top: 15px;
+            left: 180px;
+        }
+
+        .bottom-border {
+            bottom: 15px;
+            left: 175px;
+        }
+
+        .left-border {
+            left: 15px;
+            top: 120px;
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+        }
+
+        .right-border {
+            right: 15px;
+            top: 120px;
+            writing-mode: vertical-rl;
+        }
+
+        /* Padding */
+        .padding-box {
+            position: absolute;
+            top: 80px;
+            left: 65px;
+            width: 340px;
+            height: 190px;
+
+            border: 2px dotted #777;
+            background-color: #d5f5f5;
+            box-sizing: border-box;
+        }
+
+        .padding-text {
+            position: absolute;
+            font-size: 20px;
+        }
+
+        .top-padding {
+            top: 15px;
+            left: 100px;
+        }
+
+        .bottom-padding {
+            bottom: 15px;
+            left: 70px;
+        }
+
+        .left-padding {
+            left: 10px;
+            top: 55px;
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+        }
+
+        .right-padding {
+            right: 10px;
+            top: 55px;
+            writing-mode: vertical-rl;
+        }
+
+        /* Content */
+        .content {
+            position: absolute;
+            top: 68px;
+            left: 70px;
+
+            width: 200px;
+            height: 100px;
+
+            background-color: pink;
+            border: 2px solid #b85c7a;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 24px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box-model">
+
+        <!-- Margin -->
+        <div class="margin-text top-margin">top margin</div>
+        <div class="margin-text bottom-margin">bottom margin</div>
+        <div class="margin-text left-margin">left margin</div>
+        <div class="margin-text right-margin">right margin</div>
+
+        <!-- Border -->
+        <div class="border-box">
+
+            <div class="border-text top-border">top border</div>
+            <div class="border-text bottom-border">bottom border</div>
+            <div class="border-text left-border">left border</div>
+            <div class="border-text right-border">right border</div>
+
+            <!-- Padding -->
+            <div class="padding-box">
+
+                <div class="padding-text top-padding">
+                    top padding
+                </div>
+
+                <div class="padding-text bottom-padding">
+                    bottom padding
+                </div>
+
+                <div class="padding-text left-padding">
+                    left padding
+                </div>
+
+                <div class="padding-text right-padding">
+                    right padding
+                </div>
+
+                <!-- Content -->
+                <div class="content">
+                    Content
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
