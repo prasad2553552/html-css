@@ -1,0 +1,128 @@
+<!--<!DOCTYPE html>
+<html>
+<head>
+<style>
+p {
+  background-color: blue;
+  padding: 10px;
+}
+
+span {
+  background-color: red;
+  color: white;
+  padding: 10px;
+}
+
+p.ex1 {display: none;}
+p.ex2 {display: inline;}
+p.ex3 {display: block;}
+p.ex4 {display: inline-block;}
+p.ex5 {display: flex;}
+p.ex6 {display: grid;}
+</style>
+</head>
+<body>
+<h1>The display Property</h1>
+
+<h2>display: none:</h2>
+<p class="ex1">
+  <span>Text 1</span>
+  <span>Text 2</span>
+  <span>Text 3</span>
+</p>
+
+<h2>display: inline:</h2>
+<p class="ex2">
+  <span>Text 1</span>
+  <span>Text 2</span>
+  <span>Text 3</span>
+</p>
+
+<h2>display: block:</h2>
+<p class="ex3">
+  <span>Text 1</span>
+  <span>Text 2</span>
+  <span>Text 3</span>
+</p>
+
+<h2>display: inline-block:</h2>
+<p class="ex4">
+  <span>Text 1</span>
+  <span>Text 2</span>
+  <span>Text 3</span>
+</p>
+
+<h2>display: flex:</h2>
+<p class="ex5">
+  <span>Text 1</span>
+  <span>Text 2</span>
+  <span>Text 3</span>
+</p>
+
+<h2>display: grid:</h2>
+<p class="ex6">
+  <span>Text 1</span>
+  <span>Text 2</span>
+  <span>Text 3</span>
+</p>
+
+</body>
+</html>-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.imgbox {
+  float: left;
+  text-align: center;
+  width: 120px;
+  border: 1px solid gray;
+  margin: 4px;
+  padding: 6px;
+}
+
+button {
+  width: 100%;
+}
+</style>
+</head>
+<body>
+
+<h2>Difference between display:none and visiblity: hidden</h2>
+<p><strong>visibility:hidden</strong> hides the element, but it still takes up space in the layout.</p>
+<p><strong>display:none</strong> removes the element from the document. It does not take up any space.</p>
+
+<div class="imgbox" id="imgbox1">Box 1<br>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStjTg1pyUT0mIH8PpIdma8SIq5kLS3g9PETbpjm4WUoQ&s=10" alt="Italy" style="width:100%">
+  <button onclick="removeElement()">Remove</button>
+</div>
+
+<div class="imgbox" id="imgbox2">Box 2<br>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfLhpGXH3AoRQmu5CWschXp1ZXLHkr7o3kmIaljkO6-Q&s=10" alt="Lights" style="width:100%">
+  <button onclick="changeVisibility()">Hide</button>
+</div>
+
+<div class="imgbox">Box 3<br>
+  <img src="C:\\Users\\RAM\\Pictures\\paper.gif" alt="Forest" style="width:100%">
+  <button onclick="resetElement()">Reset All</button>
+</div>
+
+<script>
+function removeElement() {
+  document.getElementById("imgbox1").style.display = "none";
+}
+
+function changeVisibility() {
+  document.getElementById("imgbox2").style.visibility = "hidden";
+}
+
+function resetElement() {
+  document.getElementById("imgbox1").style.display = "block";
+  document.getElementById("imgbox2").style.visibility = "visible";
+}
+</script>
+
+</body>
+</html>
